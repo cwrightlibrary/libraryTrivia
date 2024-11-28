@@ -1,5 +1,14 @@
-<html><head>
-<title>Picotron Cartridge</title>
+﻿<html><head>
+<title>Library Procedure</title>
+<script>
+	function displayName() {
+		var name = prompt("Please enter your name:");
+		if (name != null && name != "") {
+			document.getElementById("nameDisplay").innerText = name;
+		}
+		window.print();
+	}
+</script>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body style="background-color:#222">
@@ -1165,6 +1174,11 @@ var Module=typeof Module!=="undefined"?Module:{};var moduleOverrides={};var key;
 p8_update_layout();
 </script>
 </div> <!-- body_0 -->
-<button>Test</button>
+<div style="display: flex; justify-content: center; align-items: center;">
+	<button style="text-align: center; width: 50px; height: 50px;" onclick="displayName()">🖨️</button>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+	<p id="nameDisplay" style="margin-top: 20px; font-family: sans-serif; font-size: 100px;"</p>
+</div>
 </body></html>
 
